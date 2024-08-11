@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+/* From Uiverse.io by D3OXY */
+/* DEOXY Was Here */
+.form {
+    @apply flex mt-2 flex-col items-center justify-center gap-5 border-[color:var(--main-color)] shadow-[4px_4px_var(--main-color)] p-5 rounded-[5px] border-2 border-solid;
+    --input-focus: #2d8cf0;
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: #fff;
+    --main-color: #323232;
+    background: var(--background);
+  }
+ 
+  .oauthButton {
+    @apply flex justify-center items-center gap-[5px]  h-10 border-[color:var(--main-color)] bg-[color:var(--bg-color)] shadow-[4px_4px_var(--main-color)] text-base font-semibold text-[color:var(--font-color)] cursor-pointer transition-all duration-[250ms] relative overflow-hidden z-[1] pl-[auto] pr-[15px] pt-[auto] pb-[15px] rounded-[5px] border-2 border-solid before:content-[""] before:absolute before:h-full before:w-0 before:bg-[#212121] before:z-[-1] before:shadow-[4px_8px_19px_-3px_rgba(0,0,0,0.27)] before:transition-all before:duration-[250ms] before:left-0 before:top-0 hover:text-[#e8e8e8] hover:before:w-full;
+    /* margin: 50px auto 0 auto ,w-[250px]; */
+  }
+  .oauthButton::before {
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  }
+ 
+  .icon {
+    @apply w-6 h-6;
+  }
+  
+
